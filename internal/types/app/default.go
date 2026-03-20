@@ -9,6 +9,8 @@ func (config *Config) SetDefault() {
 	switch config.DBType {
 	case DB_TYPE_OCEANBASE, DB_TYPE_SEEKDB:
 		config.DBType = DB_TYPE_MYSQL
+	case DB_TYPE_KINGBASE:
+		config.DBType = DB_TYPE_POSTGRESQL
 	}
 	setDefaultString(&config.ServerHost, "0.0.0.0")
 	setDefaultInt(&config.ServerPort, 5002)
